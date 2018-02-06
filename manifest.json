@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Minkorrekt Support",
+  "version": "1.0",
+  "description": "Leitet Aufrufe von Amazon.de auf den Minkorrekt Affiliate Link um.",
+  "icons": {
+    "48": "icons/methodisch-inkorrekt-48.png",
+    "96": "icons/methodisch-inkorrekt-96.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://www.amazon.de/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
