@@ -1,0 +1,26 @@
+{
+  "name": "minkorrekt-addon",
+  "version": "1.0.0",
+  "description": "Browser Add-On um Minkorrekt mittels des Amazon Affiliate Program zu unterstützen.",
+  "main": "background.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertfoobar/minkorrekt-addon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertfoobar/minkorrekt-addon/issues"
+  },
+  "homepage": "https://github.com/robertfoobar/minkorrekt-addon#readme",
+  "devDependencies": {
+    "jasmine-core": "^3.0.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4"
+  }
+}
