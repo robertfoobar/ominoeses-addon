@@ -3,7 +3,7 @@ const addon = new Addon();
 
 if (typeof browser !== 'undefined') {
   browser.webRequest.onBeforeRequest.addListener(
-    addon.redirect,
+    addon.redirectListener,
     {
       urls: ["https://www.amazon.de/*"],
       types: ["main_frame"]

@@ -10,10 +10,9 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "https://www.amazon.de/*",
-    "amazon.de"
+    "https://www.amazon.de/*"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["dist/bundle.js"]
   }
 }
