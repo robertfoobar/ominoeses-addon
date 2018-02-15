@@ -47,7 +47,7 @@ describe('Addon', function() {
         expect(redirectedUrl).toEqual( { redirectUrl: expectedUrl });
     });
 
-    it('should add the affiliate parameter to a dp product url /wo seo segment that has no query parameters', function() {
+    it('should add the affiliate parameter to a desktop product url /wo seo segment that has no query parameters', function() {
         var productUrl = 'https://www.amazon.de/dp/B013LLIHOK/ref=sr_1_1'
         var requestDetails = {
             url: productUrl
@@ -57,12 +57,32 @@ describe('Addon', function() {
         expect(redirectedUrl).toEqual( { redirectUrl: expectedUrl });
     });
 
-    it('should add the affiliate parameter to a dp product url /wo seo segment that has query parameters', function() {
+    it('should add the affiliate parameter to a desktop product url /wo seo segment that has query parameters', function() {
         var productUrl = 'https://www.amazon.de/dp/B0749ZSPP6/ref=gw_aucc_rd_qh-work?pf_rd_p=65b559dd-fe83-4a24-9fcf-cdb0c7fa98c8&pf_rd_r=W4YHRMNBJTBE6BE832S5'
         var requestDetails = {
             url: productUrl
         }
         var expectedUrl = productUrl + '&' + affiliateTag
+        var redirectedUrl = addon.redirectListener(requestDetails);
+        expect(redirectedUrl).toEqual( { redirectUrl: expectedUrl });
+    });
+
+    it('should add the affiliate parameter to a mobile product url that has query parameters', function() {
+        var productUrl = 'https://www.amazon.de/gp/aw/d/B013LLIHOK/ref=mp_s_a_1_1?m=A3JWKAKR8XB7XF&s=apparel&ie=UTF8&qid=1518644796&sr=1-1&refinements=p_8%3A10-%2Cp_6%3AA3JWKAKR8XB7XF'
+        var requestDetails = {
+            url: productUrl
+        }
+        var expectedUrl = productUrl + '&' + affiliateTag
+        var redirectedUrl = addon.redirectListener(requestDetails);
+        expect(redirectedUrl).toEqual( { redirectUrl: expectedUrl });
+    });
+
+    it('should add the affiliate parameter to a mobile product url that has no query parameters', function() {
+        var productUrl = 'https://www.amazon.de/gp/aw/d/B013LLIHOK/ref=mp_s_a_1_1'
+        var requestDetails = {
+            url: productUrl
+        }
+        var expectedUrl = productUrl + '?' + affiliateTag
         var redirectedUrl = addon.redirectListener(requestDetails);
         expect(redirectedUrl).toEqual( { redirectUrl: expectedUrl });
     });
