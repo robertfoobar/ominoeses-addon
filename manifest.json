@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
   "name": "Minkorrekt Support",
-  "version": "1.0",
-  "description": "Leitet Aufrufe von Amazon.de auf den Minkorrekt Affiliate Link um.",
+  "manifest_version": 2,
+  "version": "1.0alpha1",
+  "description": "Browser Addon to support the famous German Minkorrekt podcast",
   "icons": {
     "48": "icons/methodisch-inkorrekt-48.png",
     "96": "icons/methodisch-inkorrekt-96.png"
@@ -13,6 +13,6 @@
     "https://www.amazon.de/*"
   ],
   "background": {
-    "scripts": ["dist/bundle.js"]
+    "scripts": ["bundle.js"]
   }
 }

@@ -4,11 +4,15 @@
   "description": "Browser Add-On um Minkorrekt mittels des Amazon Affiliate Program zu unterstützen.",
   "main": "background.js",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist addon.zip",
     "prebuild": "npm run clean",
-    "build": "webpack",
+    "build": "webpack && npm run resources",
+    "prerelease": "npm run clean",    
+    "release": "webpack webpack.prod.config.js && npm run resources && npm run zipit",
+    "resources": " cp manifest.json dist && cp -R assets/icons dist/icons",
+    "zipit": "cd dist && zip -r ../addon.zip . && cd ..",
     "test": "karma start",
-    "start": "web-ext run"
+    "start": "cd dist && web-ext run"
   },
   "repository": {
     "type": "git",
