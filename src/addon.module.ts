@@ -18,8 +18,7 @@ export class Addon  {
   };
 
   private isAmazonProduct(url: string) {
-    return /amazon\.de\/gp\/product\/[a-zA-Z0-9]{10}\/.+/.test(url) ||
-    /amazon\.de\/(.+\/)?dp\/[a-zA-Z0-9]{10}\/.+/.test(url);
+    return /amazon\.de\/(.+\/)?[a-zA-Z0-9]{10}\/.+/.test(url);
   }
 
   private isAffiliate(url: string) {
