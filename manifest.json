@@ -1,7 +1,7 @@
 {
   "name": "Minkorrekt Support",
   "manifest_version": 2,
-  "version": "1.0alpha1",
+  "version": "1.0.0",
   "description": "Browser Addon to support the famous German Minkorrekt podcast",
   "icons": {
     "48": "icons/methodisch-inkorrekt-48.png",
