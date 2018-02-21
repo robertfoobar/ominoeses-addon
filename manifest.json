@@ -1,8 +1,8 @@
 {
-  "name": "Minkorrekt Support",
+  "name": "Das Ominöse Add-On",
   "manifest_version": 2,
-  "version": "1.0.0",
-  "description": "Browser Addon to support the famous German Minkorrekt podcast",
+  "version": "1.0.1",
+  "description": "Browser Addon to support the ominous podcast",
   "icons": {
     "48": "icons/methodisch-inkorrekt-48.png",
     "96": "icons/methodisch-inkorrekt-96.png"
